@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { boboboxData, sideProjectsData } from "@/lib/data";
 import NavBar from "./components/NavBar";
 import MarqueeRow from "./components/MarqueeRow";
@@ -10,6 +11,7 @@ type NotionRow = {
   content: string;
   subtitle: string;
   label: string;
+  imageUrl: string;
 };
 
 type NotionTool = {
@@ -170,7 +172,14 @@ export default async function Home() {
                 </a>
               </div>
             </div>
-            <div className="w-full max-w-[360px] mx-auto lg:mx-0 aspect-[3/4] bg-[#f0ebe3] border border-[#e8e2d9]" />
+            <div className="relative w-full max-w-[360px] mx-auto lg:mx-0 aspect-[3/4] bg-[#f0ebe3] border border-[#e8e2d9] overflow-hidden">
+              <Image
+                src="/profile.jpg"
+                alt="Septian"
+                fill
+                className="object-cover object-center"
+              />
+            </div>
           </div>
         </div>
       </section>
