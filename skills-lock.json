@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "design-review": {
+      "source": "jezweb/claude-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/frontend/skills/design-review/SKILL.md",
+      "computedHash": "401194389fa8c31fe777420487cf529336e14cd2e76c436233d67e9cb6244d69"
+    }
+  }
+}
