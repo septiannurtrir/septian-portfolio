@@ -12,6 +12,7 @@ type NotionRow = {
   subtitle: string;
   label: string;
   imageUrl: string;
+  htmlContent?: string;
 };
 
 type NotionTool = {
@@ -198,18 +199,25 @@ export default async function Home() {
           <p className="text-accent text-[11px] font-medium uppercase tracking-[0.22em] mb-6">
             About
           </p>
-          <div className="max-w-2xl space-y-5">
-            <p className="text-dim text-base leading-relaxed">
-              {about?.content ||
-                "My work lives at the intersection of product, data, and marketing. At Bobobox, I shipped features across the full AARRR funnel — from email systems that went from 15% to 61.5% open rate, to payment integrations that now handle 31% of all transactions, to a full MMP migration that restored Rp500M/month in attributed revenue visibility."}
-            </p>
-            <p className="text-dim text-base leading-relaxed">
-              {about?.subtitle ||
-                "I don’t just use AI as a buzzword. I build with it — Cursor, Claude, Lovable, N8N — to move faster and test smarter."}
-            </p>
-            <p className="text-ink text-base font-medium">
-              {about?.label || "Open to senior Growth PM roles and consulting opportunities."}
-            </p>
+          <div className="max-w-2xl">
+            {about?.htmlContent ? (
+              <div
+                className="text-dim text-base leading-relaxed [&_p+p]:mt-5 [&_strong]:text-ink [&_strong]:font-medium"
+                dangerouslySetInnerHTML={{ __html: about.htmlContent }}
+              />
+            ) : (
+              <div className="space-y-5">
+                {about?.content && (
+                  <p className="text-dim text-base leading-relaxed">{about.content}</p>
+                )}
+                {about?.subtitle && (
+                  <p className="text-dim text-base leading-relaxed">{about.subtitle}</p>
+                )}
+                {about?.label && (
+                  <p className="text-ink text-base font-medium">{about.label}</p>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </section>
