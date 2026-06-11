@@ -74,7 +74,7 @@ export default async function SideProjectsPage() {
             href="/"
             className="text-sm text-dim hover:text-accent transition-colors duration-200"
           >
-            ← Septian
+            ← Septian Rachmadi
           </Link>
           <span className="text-sm text-dim">Side Projects</span>
         </div>
@@ -147,11 +147,11 @@ export default async function SideProjectsPage() {
             href="/"
             className="font-display text-base font-semibold text-ink hover:text-accent transition-colors duration-200"
           >
-            Septian
+            Septian Rachmadi
           </Link>
           <div className="flex items-center gap-6">
             <a
-              href="https://linkedin.com/in/septian-adi-nugroho"
+              href="https://www.linkedin.com/in/septian-nur-tri-r-696b23150"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-dim hover:text-accent transition-colors duration-200"
@@ -159,15 +159,15 @@ export default async function SideProjectsPage() {
               LinkedIn ↗
             </a>
             <a
-              href="mailto:rodabesi07@gmail.com"
+              href="mailto:septiannurtrir@gmail.com"
               className="text-sm text-dim hover:text-accent transition-colors duration-200"
             >
-              rodabesi07@gmail.com
+              septiannurtrir@gmail.com
             </a>
           </div>
         </div>
         <div className="mx-auto max-w-5xl mt-4">
-          <p className="text-[11px] text-dim tracking-wide">© 2026 Septian</p>
+          <p className="text-[11px] text-dim tracking-wide">© 2026 SNTR</p>
         </div>
       </footer>
     </div>

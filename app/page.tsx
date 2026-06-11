@@ -124,7 +124,7 @@ export default async function Home() {
             href="/"
             className="font-display text-lg font-semibold text-ink hover:text-accent transition-colors duration-200"
           >
-            Septian
+            Septian Rachmadi
           </Link>
           <div className="hidden sm:flex items-center gap-7 text-[11px] font-medium uppercase tracking-[0.14em] text-dim">
             <a href="#about" className="hover:text-ink transition-colors duration-200">About</a>
@@ -169,6 +169,14 @@ export default async function Home() {
                   className="px-6 py-3 border border-edge text-ink text-sm font-medium hover:border-[var(--accent)] hover:text-accent transition-colors duration-200"
                 >
                   See my work ↓
+                </a>
+                <a
+                  href="https://drive.google.com/uc?export=download&id=11tK48KhQEKuvdHLLK6PrIqdKBqqky13Z"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 border border-edge text-ink text-sm font-medium hover:border-[var(--accent)] hover:text-accent transition-colors duration-200"
+                >
+                  Download Resume ↓
                 </a>
               </div>
             </div>
@@ -397,7 +405,7 @@ export default async function Home() {
           </p>
           <div className="flex flex-wrap gap-4">
             <a
-              href="https://www.linkedin.com/in/septian-adi-nugroho"
+              href="https://www.linkedin.com/in/septian-nur-tri-r-696b23150"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--accent)] text-[var(--bg)] text-sm font-medium hover:opacity-90 transition-opacity duration-200"
@@ -405,10 +413,10 @@ export default async function Home() {
               LinkedIn ↗
             </a>
             <a
-              href="mailto:rodabesi07@gmail.com"
+              href="mailto:septiannurtrir@gmail.com"
               className="inline-flex items-center gap-2 px-6 py-3 border border-edge text-ink text-sm font-medium hover:border-[var(--accent)] hover:text-accent transition-colors duration-200"
             >
-              rodabesi07@gmail.com
+              septiannurtrir@gmail.com
             </a>
           </div>
         </div>
@@ -421,11 +429,11 @@ export default async function Home() {
             href="/"
             className="font-display text-base font-semibold text-ink hover:text-accent transition-colors duration-200"
           >
-            Septian
+            Septian Rachmadi
           </Link>
           <div className="flex items-center gap-6">
             <a
-              href="https://linkedin.com/in/septian-adi-nugroho"
+              href="https://www.linkedin.com/in/septian-nur-tri-r-696b23150"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-dim hover:text-accent transition-colors duration-200"
@@ -433,16 +441,16 @@ export default async function Home() {
               LinkedIn ↗
             </a>
             <a
-              href="mailto:rodabesi07@gmail.com"
+              href="mailto:septiannurtrir@gmail.com"
               className="text-sm text-dim hover:text-accent transition-colors duration-200"
             >
-              rodabesi07@gmail.com
+              septiannurtrir@gmail.com
             </a>
           </div>
         </div>
         <div className="mx-auto max-w-5xl mt-4">
           <p className="text-[11px] text-dim tracking-wide">
-            © 2026 Septian · Growth PM · Bali, Indonesia
+            © 2026 SNTR
           </p>
         </div>
       </footer>
