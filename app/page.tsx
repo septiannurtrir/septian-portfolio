@@ -228,7 +228,7 @@ export default async function Home() {
           <p className="text-accent text-[11px] font-medium uppercase tracking-[0.22em] mb-8">
             Impact
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-8">
             {displayMetrics.map((stat) => (
               <div key={stat.label}>
                 <div className="font-display text-[clamp(1.6rem,3.5vw,2.5rem)] font-semibold text-ink leading-none mb-2">

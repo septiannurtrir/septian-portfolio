@@ -167,7 +167,7 @@ export default async function BoboboxPage() {
   // Hero
   const heroRow = content.find((r) => r.section === "Hero");
   const heroTitle = heroRow?.name || boboboxData.hero.title;
-  const heroSubtitle = heroRow?.content || boboboxData.hero.subtitle;
+  const heroSubtitle = heroRow?.subtitle || '';
 
   // About
   const aboutRow = content.find((r) => r.section === "About");
@@ -248,9 +248,11 @@ export default async function BoboboxPage() {
           <h1 className="text-[clamp(2rem,5vw,4rem)] font-semibold tracking-[-0.01em] leading-[1.08] mb-6 max-w-3xl text-ink">
             {heroTitle}
           </h1>
-          <p className="text-dim text-lg md:text-xl leading-relaxed max-w-2xl mb-10">
-            {heroSubtitle}
-          </p>
+          {heroSubtitle && (
+            <p className="text-dim text-lg md:text-xl leading-relaxed max-w-2xl mb-10">
+              {heroSubtitle}
+            </p>
+          )}
           <PlaceholderHero />
         </div>
       </section>
