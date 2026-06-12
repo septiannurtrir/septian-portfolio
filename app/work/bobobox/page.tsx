@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { boboboxData } from "@/lib/data";
 import ImageCarousel from "./ImageCarousel";
@@ -133,15 +134,6 @@ function AccordionGroup({ children }: { children: React.ReactNode }) {
   );
 }
 
-function PlaceholderHero() {
-  return (
-    <div className="w-full aspect-video bg-sheet flex items-center justify-center border border-edge">
-      <span className="text-dim text-xs font-medium uppercase tracking-widest">
-        image
-      </span>
-    </div>
-  );
-}
 
 export default async function BoboboxPage() {
   const [rawContent, rawProjects, rawImages] = await Promise.all([
@@ -253,7 +245,9 @@ export default async function BoboboxPage() {
               {heroSubtitle}
             </p>
           )}
-          <PlaceholderHero />
+          <div className="relative w-full aspect-video">
+            <Image src="/images/bobobox-hero.jpg" alt="Bobobox" fill className="object-cover object-center" />
+          </div>
         </div>
       </section>
 
@@ -290,11 +284,38 @@ export default async function BoboboxPage() {
           </TopAccordion>
 
           <TopAccordion title="Impact">
-            <div className="pl-4 border-l border-edge">
+            <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: "12px" }}>
               {impactItems.map((item) => (
-                <SubAccordion key={item.title} title={item.title}>
-                  {item.content}
-                </SubAccordion>
+                <div
+                  key={item.title}
+                  style={{
+                    background: "#f0ebe3",
+                    border: "0.5px solid #e8e2d9",
+                    borderRadius: "8px",
+                    padding: "16px",
+                  }}
+                >
+                  <p
+                    style={{
+                      fontSize: "10px",
+                      fontWeight: 500,
+                      textTransform: "uppercase",
+                      letterSpacing: "0.06em",
+                      color: "#8B1A1A",
+                      textAlign: "center",
+                      marginBottom: "10px",
+                    }}
+                  >
+                    {item.title}
+                  </p>
+                  <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                    {item.content.split("\n").filter(Boolean).map((metric, i) => (
+                      <p key={i} style={{ fontSize: "13px", color: "#6b5f58", margin: 0 }}>
+                        {metric}
+                      </p>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </TopAccordion>
